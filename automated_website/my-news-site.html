@@ -1,23 +1,37 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Your News Site</title>
-        
-    </head>
-    <body>
-        <div class="news">
-            <div class="title">ldfjds</div>
-            <div class="detail">fdksfj</div>
-        </div>
-        <div class="news">
-                <div class="title">ldfjds</div>
-                <div class="detail">fdksfj</div>
-            </div>
-    <script>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ethio Times</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+        <script type="text/javascript" src="news.json"></script>
+        <script type="text/javascript" >
+                    function load() {
+                        var mydata = JSON.parse(news);
+                        var div = document.getElementById('news');
 
-    let title = document.getElementsByClassName("title");
-    let detail = document.getElementsByClassName("detail");
-    
-    </script>
-    
+                        for(var i = 1; i < mydata.length; i++)
+                        {
+                            div.innerHTML = div.innerHTML
+                            + "<div class='title' id="+i+">" + mydata[i].title +"</div>" + "<br>"
+                            + "<div class='img'><img src = \"" + mydata[i].imageSrc + "\" width=\"80%\"/></div>" + "<br>"
+                            + "<div class='detail' id="+i+"> <p>"+ mydata[i].detail +"</p></div>" + "<br>";
+                        }
+                    }
+        </script>
+    </head>
+   
+    <body onload="load()">
+        <header>
+            <h2>Ethio Times</h2>
+            <i>your daily news update from popular site in ethiopia</i>
+        </header>
+        <section>
+            <div class="content" id= "news">
+        </section>
+        </div>
+
     </body>
 </html>
