@@ -1,0 +1,48 @@
+body{
+    margin: 30px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+}
+header{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 130px;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 2px 2px 2px 2px rgb(116, 115, 115);
+
+}
+header h2{
+   padding: 5px;
+    font-size: 32px;
+}
+header i{
+    font-size: 20px;
+}
+section{
+    margin-top: 25px;
+}
+.content{
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(29, 29, 29);
+}
+.title{
+    font-size: 25px;
+    font-weight: 300;
+    clear: both;
+    padding: 10px;
+    border-top: solid rgb(248, 211, 211) 1px;
+}
+.img{
+    float: left;
+    width: 40%;
+}
+.detail{
+    float: right;
+    width: 60%;
+    
+}
+p{
+   font-size: 20px;
+}
+
